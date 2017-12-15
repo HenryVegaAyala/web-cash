@@ -3,78 +3,57 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?php echo Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <meta charset="<?php echo Yii::$app->charset ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300,100,200' rel='stylesheet'
+          type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <?php echo Html::csrfMetaTags() ?>
+    <title><?php echo Html::encode($this->title) ?></title>
+    <?php echo Html::cssFile('@web/css/jetcash.min.css?v=' . filemtime(Yii::getAlias('@webroot/css/jetcash.min.css'))) ?>
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
+<div id="preloader">
+    <div id="loader">&nbsp;</div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+<div id="container">
+    <?php echo $content ?>
+</div>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
-
+<?php //echo Html::jsFile('@web/js/all.js?v=' . filemtime(Yii::getAlias('@webroot/js/all.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.migrate.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.migrate.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/owl.carousel.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/owl.carousel.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.magnific-popup.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.magnific-popup.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.bxslider.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.bxslider.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.appear.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.appear.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.countTo.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.countTo.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/bootstrap.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/bootstrap.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.imagesloaded.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.imagesloaded.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.isotope.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.isotope.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/retina-1.1.0.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/retina-1.1.0.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/plugins-scroll.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/plugins-scroll.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/waypoint.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/waypoint.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.stellar.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.stellar.min.js'))) ?>
+<?php echo Html::jsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyCfMnpOPXS3ByOSEkSJXfGFDnJiKsklYIQ') ?>
+<?php echo Html::jsFile('@web/js/vendor/gmap3.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/gmap3.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.themepunch.plugins.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.themepunch.plugins.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/jquery.themepunch.revolution.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.themepunch.revolution.min.js'))) ?>
+<?php echo Html::jsFile('@web/js/vendor/script.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/script.js'))) ?>
+<?php echo Html::jsFile('@web/js/jetcash.js?v=' . filemtime(Yii::getAlias('@webroot/js/jetcash.js'))) ?>
 <?php $this->endBody() ?>
 </body>
 </html>

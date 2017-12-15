@@ -78,8 +78,8 @@ module.exports = function (grunt) {
     },
     watch: {
       js: {
-        files: ['assets/js/**/*.js', 'assets/js/all.json'],
-        tasks: ['concat_sourcemap', 'uglify:lib'],
+        files: ['assets/js/**/*.js', 'assets/js/all.json', 'web/js/jetcash.js'],
+        tasks: ['concat_sourcemap', 'minified'],
         options: {
           livereload: true
         }
