@@ -30,9 +30,5 @@ tests/_output/*
 tests/_support/_generated
 .gitignore
 /node_modules/
-.htaccess
-Gruntfile.js
 package.json
-web/.htaccess
-web/fonts/
 yarn.lock
