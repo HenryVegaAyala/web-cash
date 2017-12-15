@@ -1,0 +1,15 @@
+[
+  "vendor/bower/jquery/dist/jquery.js",
+  "vendor/bower/bootstrap/dist/js/bootstrap.js",
+  "vendor/yiisoft/yii2/assets/yii.js",
+  "vendor/yiisoft/yii2/assets/yii.validation.js",
+  "vendor/yiisoft/yii2/assets/yii.activeForm.js",
+  "web/repository/bootstrap/js/bootstrap.js",
+  "web/repository/superfish/hoverIntent.js",
+  "web/repository/superfish/superfish.js",
+  "web/repository/morphext/morphext.js",
+  "web/repository/wow/wow.js",
+  "web/repository/stickyjs/sticky.js",
+  "web/repository/easing/easing.js",
+  "web/js/custom.js"
+]
