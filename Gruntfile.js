@@ -4,10 +4,16 @@ module.exports = function (grunt) {
     concat_css: {
       all: {
         src: [
-          'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800',
-          'web/repository/bootstrap/css/bootstrap.css',
-          'web/repository/font-awesome/css/font-awesome.css',
-          'web/repository/animate-css/animate.css'
+          'web/css/vendor/animate.css',
+          'web/css/vendor/bootstrap.css',
+          'web/css/vendor/flexslider.css',
+          'web/css/vendor/font-awesome.css',
+          'web/css/vendor/jquery.bxslider.css',
+          'web/css/vendor/magnific-popup.css',
+          'web/css/vendor/owl.carousel.css',
+          'web/css/vendor/owl.theme.css',
+          'web/css/vendor/settings.css',
+          'web/css/style.css'
         ],
         dest: 'web/css/jetcash.css'
       }
@@ -21,7 +27,7 @@ module.exports = function (grunt) {
       }
     },
     cssmin: {
-      eqatu: {
+      web: {
         files: [{
           expand: true,
           cwd: 'web/css/',
