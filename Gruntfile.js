@@ -7,18 +7,17 @@ module.exports = function (grunt) {
           'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800',
           'web/repository/bootstrap/css/bootstrap.css',
           'web/repository/font-awesome/css/font-awesome.css',
-          'web/repository/animate-css/animate.css',
-          'web/css/style.css'
+          'web/repository/animate-css/animate.css'
         ],
-        dest: 'web/css/cb.css'
+        dest: 'web/css/jetcash.css'
       }
     },
     purifycss: {
       options: {},
       target: {
         src: ['views/layouts/*.php', 'views/site/*.php', 'web/js/all.js'],
-        css: ['web/css/cb.css'],
-        dest: 'web/css/cb.css'
+        css: ['web/css/jetcash.css'],
+        dest: 'web/css/jetcash.css'
       }
     },
     cssmin: {
@@ -26,7 +25,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'web/css/',
-          src: ['cb.css'],
+          src: ['jetcash.css'],
           dest: 'web/css/',
           ext: '.min.css'
         }]
