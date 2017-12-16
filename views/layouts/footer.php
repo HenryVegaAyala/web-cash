@@ -92,7 +92,6 @@ use yii\helpers\Url;
                         <a href="http://www.sbs.gob.pe/" target="_blank">
                             <img src="images/logo/sbs.png" style="height:30px">
                         </a>
-
                     </p>
                 </div>
             </div>

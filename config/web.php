@@ -15,11 +15,10 @@ $config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
-        'assetManager' => [
-            'bundles' => false,
-        ],
+        //'assetManager' => [
+        //    'bundles' => false,
+        //],
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'rc1vSZJ8HxzNLYoMXG8jd98rfbiKoS3h',
         ],
         'cache' => [

@@ -8,7 +8,7 @@ $this->title = 'JetCash';
             <ul>    <!-- SLIDE  -->
                 <li data-transition="3dcurtain-horizontal" data-slotamount="7" data-masterspeed="500">
                     <!-- MAIN IMAGE -->
-                    <img src="upload/banner/banner01.jpg" alt="slidebg1" data-bgfit="cover"
+                    <img src="images/banner/banner01.jpg" alt="slidebg1" data-bgfit="cover"
                          data-bgposition="center top" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
 
