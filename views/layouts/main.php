@@ -45,7 +45,7 @@ AppAsset::register($this);
 
 <div id="container">
     <?php echo $this->render('header') ?>
-    <?php //echo $content ?>
+    <?php echo $content ?>
     <?php echo $this->render('footer') ?>
 </div>
 
