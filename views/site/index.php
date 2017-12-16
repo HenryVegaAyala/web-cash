@@ -71,7 +71,7 @@ $this->title = 'JetCash';
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
                          data-captionhidden="on"
-                         style="z-index: 4">Descarga &amp; Afiliate
+                         style="z-index: 4">Descarga & Afiliate
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -310,6 +310,7 @@ $this->title = 'JetCash';
                             <div class="services-head">
                                 <img src="images/icon/ico-transferir-80x80.png">
                                 <h2>Transferir</h2>
+                                <span>Integer posuere erat a ante</span>
                             </div>
                             <a href="#" class="small-btn">Ver más</a>
                         </div>

@@ -4183,10 +4183,6 @@ footer .up-footer .footer-line p {
   }
 }
 
-body {
-  overflow: hidden;
-}
-
 #preloader {
   position: fixed;
   top: 0;
