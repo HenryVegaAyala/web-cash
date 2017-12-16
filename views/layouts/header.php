@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Url;
+
 ?>
 
 <header class="clearfix">
@@ -12,7 +13,9 @@ use yii\helpers\Url;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo Url::home() ?>"><img alt="" src="images/logo/logo.png" style="min-width: 120px; width: 120px"></a>
+                <a class="navbar-brand" href="<?php echo Url::home() ?>">
+                    <img alt="" src="images/logo/logo.png" style="min-width: 120px; width: 120px">
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
