@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c414767a10433a195f6746a511ad5009",
+    "content-hash": "d99a43754ae44d488b5f52232236b1fd",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -1051,7 +1051,7 @@
                 "vendor",
                 "yii2"
             ],
-            "time": "2015-08-25T18:01:54+00:00"
+            "time": "2015-08-25 18:01:54"
         },
         {
             "name": "monolog/monolog",
@@ -3860,7 +3860,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4.0"
+        "php": ">=7.0.0"
     },
     "platform-dev": []
 }

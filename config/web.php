@@ -6,7 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log','assetsAutoCompress'],
     'sourceLanguage' => 'es',
     'language' => 'es',
     'timeZone' => 'America/Lima',
@@ -15,9 +15,41 @@ $config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
-        //'assetManager' => [
-        //    'bundles' => false,
-        //],
+        'assetManager' => [
+            'appendTimestamp' => true,
+            'converter' => [
+                'class' => 'yii\web\AssetConverter',
+                'commands' => [
+                    'less' => ['css', 'lessc {from} {to} --no-color'],
+                    'ts' => ['js', 'tsc --out {to} {from}'],
+                ],
+            ],
+        ],
+        'assetsAutoCompress' =>
+            [
+                'class' => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
+                'enabled' => true,
+                'readFileTimeout' => 3,
+                'jsCompress' => true,
+                'jsCompressFlaggedComments' => true,
+                'cssCompress' => true,
+                'cssFileCompile' => true,
+                'cssFileRemouteCompile' => false,
+                'cssFileCompress' => true,
+                'cssFileBottom' => false,
+                'cssFileBottomLoadOnJs' => false,
+                'jsFileCompile' => true,
+                'jsFileRemouteCompile' => false,
+                'jsFileCompress' => true,
+                'jsFileCompressFlaggedComments' => true,
+                'htmlCompress' => true,
+                'noIncludeJsFilesOnPjax' => true,
+                'htmlCompressOptions' =>
+                    [
+                        'extra' => false,
+                        'no-comments' => true,
+                    ],
+            ],
         'request' => [
             'cookieValidationKey' => 'rc1vSZJ8HxzNLYoMXG8jd98rfbiKoS3h',
         ],
@@ -33,9 +65,6 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
         'log' => [
