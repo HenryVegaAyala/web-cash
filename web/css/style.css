@@ -456,7 +456,7 @@ header.one-page .navbar-nav > li > a span {
   margin: 0;
 }
 .services-section .services-box {
-  background: url("../upload/background/bg01.jpg");
+  background: url("../images/background/bg01.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1499,7 +1499,7 @@ a.button-third:hover {
   color: #ffffff;
 }
 .features-section3 {
-  background: url('../upload/background/bg01.jpg');
+  background: url('../images/background/bg01.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2999,7 +2999,7 @@ ul.team-social li a:hover i {
   margin-bottom: 40px;
 }
 .tab-section {
-  background: url('../upload/background/bg01.jpg');
+  background: url('../images/background/bg01.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

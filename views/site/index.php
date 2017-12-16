@@ -283,7 +283,6 @@ $this->title = 'JetCash';
                             <div class="services-head">
                                 <img src="images/icon/ico-recargar-80x80.png">
                                 <h2>Cargar y Recargar</h2>
-                                <span>Vestibulum auctor dapibus neque.</span>
                             </div>
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
@@ -293,7 +292,6 @@ $this->title = 'JetCash';
                             <div class="services-head">
                                 <img src="images/icon/ico-cargar-80x80.png">
                                 <h2>Retirar</h2>
-                                <span>Etetur adipiscing elit. </span>
                             </div>
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
@@ -303,7 +301,6 @@ $this->title = 'JetCash';
                             <div class="services-head">
                                 <img src="images/icon/ico-comprar-80x80.png">
                                 <h2>Comprar</h2>
-                                <span>Cum sociis natoque penatibus et </span>
                             </div>
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
@@ -313,7 +310,6 @@ $this->title = 'JetCash';
                             <div class="services-head">
                                 <img src="images/icon/ico-transferir-80x80.png">
                                 <h2>Transferir</h2>
-                                <span>Integer posuere erat a ante</span>
                             </div>
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
