@@ -4203,6 +4203,6 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  background: url('../images/loader.svg') no-repeat center 0;
+  background: url('../images/utils/loader.svg') no-repeat center 0;
   margin: -50px 0 0 -50px;
 }
