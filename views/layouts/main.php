@@ -10,37 +10,43 @@ AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?php echo Yii::$app->language ?>">
+<html lang="<?php echo Yii::$app->language ?>" class="no-js">
 <head>
     <meta charset="<?php echo Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300,100,200' rel='stylesheet'
           type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <?php echo Html::csrfMetaTags() ?>
     <title><?php echo Html::encode($this->title) ?></title>
     <?php //echo Html::cssFile('@web/css/jetcash.min.css?v=' . filemtime(Yii::getAlias('@webroot/css/jetcash.min.css'))) ?>
-    <?php echo Html::cssFile('@web/css/vendor/animate.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/animate.css'))) ?>
     <?php echo Html::cssFile('@web/css/vendor/bootstrap.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/bootstrap.css'))) ?>
-    <?php echo Html::cssFile('@web/css/vendor/flexslider.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/flexslider.css'))) ?>
-    <?php echo Html::cssFile('@web/css/vendor/font-awesome.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/font-awesome.css'))) ?>
-    <?php echo Html::cssFile('@web/css/vendor/jquery.bxslider.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/jquery.bxslider.css'))) ?>
-    <?php echo Html::cssFile('@web/css/vendor/magnific-popup.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/magnific-popup.css'))) ?>
     <?php echo Html::cssFile('@web/css/vendor/jowl.carousel.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/owl.carousel.css'))) ?>
     <?php echo Html::cssFile('@web/css/vendor/owl.theme.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/owl.theme.css'))) ?>
+    <?php echo Html::cssFile('@web/css/vendor/jquery.bxslider.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/jquery.bxslider.css'))) ?>
+    <?php echo Html::cssFile('@web/css/vendor/magnific-popup.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/magnific-popup.css'))) ?>
+    <?php echo Html::cssFile('@web/css/vendor/font-awesome.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/font-awesome.css'))) ?>
+    <?php echo Html::cssFile('@web/css/vendor/animate.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/animate.css'))) ?>
+    <?php echo Html::cssFile('@web/css/vendor/flexslider.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/flexslider.css'))) ?>
     <?php echo Html::cssFile('@web/css/vendor/settings.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/settings.css'))) ?>
     <?php echo Html::cssFile('@web/css/style.css?v=' . filemtime(Yii::getAlias('@webroot/css/style.css'))) ?>
     <?php $this->head() ?>
 </head>
+
 <body>
 <?php $this->beginBody() ?>
+
 <div id="preloader">
     <div id="loader">&nbsp;</div>
 </div>
 
 <div id="container">
-    <?php echo $content ?>
+    <?php echo $this->render('header') ?>
+    <?php //echo $content ?>
+    <?php echo $this->render('footer') ?>
 </div>
 
 <?php //echo Html::jsFile('@web/js/all.js?v=' . filemtime(Yii::getAlias('@webroot/js/all.js'))) ?>
@@ -66,5 +72,6 @@ AppAsset::register($this);
 <?php echo Html::jsFile('@web/js/jetcash.js?v=' . filemtime(Yii::getAlias('@webroot/js/jetcash.js'))) ?>
 <?php $this->endBody() ?>
 </body>
+
 </html>
 <?php $this->endPage() ?>

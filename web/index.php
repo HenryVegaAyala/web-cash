@@ -1,6 +1,5 @@
-<?php
+﻿<?php
 
-// comment out the following two lines when deployed to production
 defined('YII_DEBUG') || define('YII_DEBUG', false);
 defined('YII_ENV') || define('YII_ENV', 'prod');
 
