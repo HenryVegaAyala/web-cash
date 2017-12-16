@@ -3,7 +3,6 @@
 use yii\helpers\Url;
 
 ?>
-
 <header class="clearfix">
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">

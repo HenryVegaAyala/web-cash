@@ -1,7 +1,8 @@
 <?php
-$this->title = 'JetCash';
-?>
 
+$this->title = 'JetCash';
+
+?>
 <div id="slider" class="slider1">
     <div class="tp-banner-container">
         <div class="tp-banner">
@@ -266,7 +267,6 @@ $this->title = 'JetCash';
         </div>
     </div>
 </div>
-
 <div id="content">
     <div class="section-content services-section">
         <div class="title-section">
@@ -437,9 +437,8 @@ $this->title = 'JetCash';
                     <div class="image-place triggerAnimation animated" data-animate="slideInRight">
                         <div style="padding-top: 15% !important">
                             <div style="position:relative;height:0;padding-bottom:56.25%;">
-                                <iframe src="https://www.youtube.com/embed/464SelmP8uE?ecver=2" width="640"
-                                        height="360" frameborder="0"
-                                        style="position:absolute;width:100%;height:100%;left:0"
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/6QaJCLmx7aw"
+                                        frameborder="0" gesture="media" allow="encrypted-media"
                                         allowfullscreen></iframe>
                             </div>
                         </div>

@@ -6,14 +6,7 @@ use yii\helpers\Url;
 <footer>
     <div class="social-section">
         <ul class="social-icons triggerAnimation animated" data-animate="tada">
-            <li>
-                <span style="font-size: 20px; color: #FFFFFF">Llámanos <big>+51-1 611 5050</big> ó síguenos en:
-                </span>
-            </li>
-            <li>
-                <a class="facebook" target="_blank" href="https://www.facebook.com" >
-                    <i class="fa fa-facebook"></i>
-                </a>
+            <li><span style="font-size: 20px; color: #FFFFFF">Llámanos <big>+51-1 611 5050</big> ó síguenos en:</span>
             </li>
         </ul>
     </div>

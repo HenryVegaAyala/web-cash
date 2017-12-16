@@ -20,6 +20,8 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        'http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300,100,200',
+        'https://fonts.googleapis.com/css?family=Open+Sans',
         'css/vendor/animate.css',
         'css/vendor/bootstrap.css',
         'css/vendor/flexslider.css',
