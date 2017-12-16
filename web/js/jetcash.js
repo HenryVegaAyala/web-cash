@@ -4,11 +4,12 @@ $(window).load(function () {
 })
 
 var revapi;
+
 jQuery(document).ready(function () {
 
     revapi = jQuery('.tp-banner').revolution(
         {
-            delay: 9000,
+            delay: 100,
             startwidth: 1170,
             startheight: 738,
             hideThumbs: 10,

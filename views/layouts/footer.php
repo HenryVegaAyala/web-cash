@@ -3,13 +3,6 @@
         <ul class="social-icons triggerAnimation animated" data-animate="tada">
             <li><span style="font-size: 20px; color: #FFFFFF">Llámanos <big>+51-1 611 5050</big> ó síguenos en:</span> </li>
             <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-            <!--
-            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-            -->
         </ul>
     </div>
 
@@ -20,7 +13,6 @@
                 <div class="col-md-3">
                     <div class="widget footer-widget text-widget">
                         <h1>JetCash</h1>
-                        <!--<p>JetCash es la plataforma virtual con la cual  podrás comprar, pagar, hacer transferencias, retirar efectivo y muchos beneficios más a través de tu celular, es así que JetCash se convierte en la solución de dinero seguro, rápido y económico.</p>-->
                         <p>Empresa Peruana de Soluciones de Dinero Electrónico S.A. autorizada por la SBS.</p>
                         <p>Av. Camino Real 391-395, San Isidro</p>
                         <p>+51-1 611 5050</p>
@@ -68,19 +60,6 @@
                 </div>
 
             </div>
-            <!--
-            <div class="footer-line">
-                <div class="col-md-6">
-                    <p style="text-align: left; color: #fff">JetCash - Todos los derechos reservados 2017.</p>
-                </div>
-                <div class="col-md-6">
-                    <p style="text-align: right; color: #fff">
-                        <a href="https://www.indecopi.gob.pe/inicio" target="_blank"><img src="https://www.jetperu.com.pe/img/indecopi.jpg" /></a>
-                        <a href="http://www.sbs.gob.pe/" target="_blank"><img src="https://www.jetperu.com.pe/img/sbs.jpg" /></a>
-                    </p>
-                </div>
-            </div>
-            -->
         </div>
     </div>
     <div class="col-md-12" style="background: #f9fafb; line-height:50px; vertical-align: middle">
@@ -97,7 +76,6 @@
                         <a href="http://www.sbs.gob.pe/" target="_blank">
                             <img src="https://www.jetperu.com.pe/img/sbs.jpg" />
                         </a>
-
                     </p>
                 </div>
             </div>

@@ -1,13 +1,8 @@
 <?php
-$this->title = 'My Yii Application';
+$this->title = 'JetCash';
 ?>
 
 <div id="slider" class="slider1">
-    <!--
-    #################################
-        - THEMEPUNCH BANNER -
-    #################################
-    -->
     <div class="tp-banner-container">
         <div class="tp-banner">
             <ul>    <!-- SLIDE  -->
@@ -273,9 +268,6 @@ $this->title = 'My Yii Application';
 </div>
 
 <div id="content">
-
-    <!-- sevices-section section
-        ================================================== -->
     <div class="section-content services-section">
         <div class="title-section">
             <div class="container triggerAnimation animated" data-animate="bounceIn">
@@ -289,48 +281,40 @@ $this->title = 'My Yii Application';
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <!--<a href="#" class="icon"><i class="fa fa-thumbs-o-up"></i></a>-->
                                 <img src="upload/icons/ico-recargar-80x80.png">
                                 <h2>Cargar y Recargar</h2>
                                 <span>Vestibulum auctor dapibus neque.</span>
                             </div>
-                            <!--<p>Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis  </p>-->
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <!--<a href="#" class="icon"><i class="fa fa-tablet"></i></a>-->
                                 <img src="upload/icons/ico-cargar-80x80.png">
                                 <h2>Retirar</h2>
                                 <span>Etetur adipiscing elit. </span>
                             </div>
-                            <!--<p>Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis  </p>-->
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <!--<a href="#" class="icon"><i class="fa fa-eye"></i></a>-->
                                 <img src="upload/icons/ico-comprar-80x80.png">
                                 <h2>Comprar</h2>
                                 <span>Cum sociis natoque penatibus et </span>
                             </div>
-                            <!--<p>Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis  </p>-->
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <!--<a href="#" class="icon"><i class="fa fa-stethoscope"></i></a>-->
                                 <img src="upload/icons/ico-transferir-80x80.png">
                                 <h2>Transferir</h2>
                                 <span>Integer posuere erat a ante</span>
                             </div>
-                            <!--<p>Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis  </p>-->
                             <a href="#" class="small-btn">Ver más</a>
                         </div>
                     </div>
@@ -339,19 +323,6 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 
-    <!-- banner-section
-        ================================================== -->
-    <!--
-        <div class="section-content banner-section">
-            <div class="container triggerAnimation animated" data-animate="bounceIn">
-                <h1>Top reasons to work with us</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                <a class="button-two" href="#"><span>Buy it now</span><i class="fa fa-angle-right"></i></a>
-            </div>
-        </div>
-    -->
-    <!-- portfolio-section
-        ================================================== -->
     <div class="section-content portfolio-section">
         <div class="title-section">
             <div class="container triggerAnimation animated" data-animate="bounceIn">
@@ -365,12 +336,6 @@ $this->title = 'My Yii Application';
                 <div class="item project-post">
                     <div class="project-gal">
                         <img alt="" src="upload/services/service01.jpg">
-                        <!--
-                        <div class="hover-box">
-                            <a class="zoom" href="http://placehold.it/450x250"><i class="fa fa-search-plus"></i></a>
-                            <a class="link" href="single-project.html"><i class="fa fa-link"></i></a>
-                        </div>
-                        -->
                     </div>
                     <div class="project-content">
                         <h2>Recarga de móvil</h2>
@@ -381,12 +346,6 @@ $this->title = 'My Yii Application';
                 <div class="item project-post">
                     <div class="project-gal">
                         <img alt="" src="upload/services/service02.jpg">
-                        <!--
-                        <div class="hover-box">
-                            <a class="zoom" href="http://placehold.it/450x250"><i class="fa fa-search-plus"></i></a>
-                            <a class="link" href="single-project.html"><i class="fa fa-link"></i></a>
-                        </div>
-                        -->
                     </div>
                     <div class="project-content">
                         <h2>Pago de servicios</h2>
@@ -397,12 +356,6 @@ $this->title = 'My Yii Application';
                 <div class="item project-post ">
                     <div class="project-gal">
                         <img alt="" src="upload/services/service04.jpg">
-                        <!--
-                        <div class="hover-box">
-                            <a class="zoom" href="http://placehold.it/450x250"><i class="fa fa-search-plus"></i></a>
-                            <a class="link" href="single-project.html"><i class="fa fa-link"></i></a>
-                        </div>
-                        -->
                     </div>
                     <div class="project-content">
                         <h2>Cambio de dinero</h2>
@@ -413,47 +366,12 @@ $this->title = 'My Yii Application';
                 <div class="item project-post">
                     <div class="project-gal">
                         <img alt="" src="upload/services/service05.jpg">
-                        <!--
-                        <div class="hover-box">
-                            <a class="zoom" href="http://placehold.it/450x250"><i class="fa fa-search-plus"></i></a>
-                            <a class="link" href="single-project.html"><i class="fa fa-link"></i></a>
-                        </div>
-                        -->
                     </div>
                     <div class="project-content">
                         <h2>Envío y recepción de remesas</h2>
                         <p>Vestibulum auctor dapibus neque.</p>
                     </div>
                 </div>
-                <!--
-                    <div class="item project-post">
-                        <div class="project-gal">
-                            <img alt="" src="http://placehold.it/450x250">
-                            <div class="hover-box">
-                                <a class="zoom" href="http://placehold.it/450x250"><i class="fa fa-search-plus"></i></a>
-                                <a class="link" href="single-project.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h2>Aliquam tincidunt mauris eu risus.</h2>
-                            <p>Vestibulum auctor dapibus neque.</p>
-                        </div>
-                    </div>
-
-                    <div class="item project-post">
-                        <div class="project-gal">
-                            <img alt="" src="http://placehold.it/450x250">
-                            <div class="hover-box">
-                                <a class="zoom" href="http://placehold.it/450x250"><i class="fa fa-search-plus"></i></a>
-                                <a class="link" href="single-project.html"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h2>Aliquam tincidunt mauris eu risus.</h2>
-                            <p>Vestibulum auctor dapibus neque.</p>
-                        </div>
-                    </div>
-                -->
             </div>
             <div class="buttons">
                 <a class="owl-prev button-third" href="#"><i class="fa fa-angle-left"></i></a>
@@ -462,79 +380,6 @@ $this->title = 'My Yii Application';
             </div>
         </div>
     </div>
-
-    <!-- features-section
-        ================================================== -->
-    <!--
-    <div class="section-content features-section parallax" data-stellar-background-ratio="0">
-        <div class="container">
-            <div class="features-head triggerAnimation animated" data-animate="bounceIn">
-                <h1>¿Por qué elegir Jet Cash?</h1>
-                <p>Nuestra plataforma cuenta con varios beneficios.</p>
-                <a class="button-two" href="#"><span>Meet the Creative Team</span></a>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <ul class="feature-list triggerAnimation animated" data-animate="slideInLeft">
-                        <li>
-                            <span><i class="fa fa-leaf"></i></span>
-                            <div class="list-cont">
-                                <h3>Dinero Seguro</h3>
-                                <p>Con la billetera electrónica tu dinero siempre estará completamente seguro ya que solo puedes acceder a el con tu usuario y tu contraseña secreta.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-bar-chart-o"></i></span>
-                            <div class="list-cont">
-                                <h3>Mayor Privacidad</h3>
-                                <p>Siempre realizaras las transacciones sin necesidad de introducir ningún dato o pasar cualquier objeto por un hardware del comerciante, por lo cual el comerciante nunca recibe ningún dato financiero tuyo.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-coffee"></i></span>
-                            <div class="list-cont">
-                                <h3>Control</h3>
-                                <p>Podrás controlar cada uno de tus movimientos por medio de tu Smartphone por lo cual siempre estarás enterado de cada transacción que se dé por medio de tu billetera electrónica.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <div class="image-place triggerAnimation animated" data-animate="slideInUp">
-                        <img src="images/dev1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <ul class="feature-list triggerAnimation animated" data-animate="slideInRight">
-                        <li>
-                            <span><i class="fa fa-heart"></i></span>
-                            <div class="list-cont">
-                                <h3>Soluciones a Medida</h3>
-                                <p>Con tu billetera electrónica no es necesario acercarte a los establecimientos para comprar o pagar servicios/productos, podrás realizarlos desde cualquier lugar y en todo momento.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-cog"></i></span>
-                            <div class="list-cont">
-                                <h3>Fácil de Usar</h3>
-                                <p>JetCash es muy fácil de usar y todos los servicios están a la vista para la facilidad de uso, además no necesitas configuración extra para utilizarlo.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-trophy"></i></span>
-                            <div class="list-cont">
-                                <h3>Psd Theme</h3>
-                                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    -->
 
     <div id="beneficios" name="beneficios" class="section-content features-section3 parallax"
          data-stellar-background-ratio="0">
@@ -546,7 +391,6 @@ $this->title = 'My Yii Application';
                         style="padding-bottom: 10px; text-align: center">¿Por qué elegir <span>Jet Cash</span>?</h1>
                 </div>
                 <div class="col-md-6">
-                    <!--<p class="triggerAnimation animated" data-animate="slideInLeft">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>-->
                     <ul class="feature-list3 triggerAnimation animated" data-animate="slideInLeft">
                         <li>
                             <span><i class="fa fa-heart"></i></span>
@@ -591,7 +435,6 @@ $this->title = 'My Yii Application';
                 </div>
                 <div class="col-md-6">
                     <div class="image-place triggerAnimation animated" data-animate="slideInRight">
-                        <!--<img src="upload/icons/ico-beneficios.png" alt="">-->
                         <div style="padding-top: 15% !important">
                             <div style="position:relative;height:0;padding-bottom:56.25%;">
                                 <iframe src="https://www.youtube.com/embed/464SelmP8uE?ecver=2" width="640"
@@ -606,57 +449,6 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 
-
-    <!-- statistic-section
-        ================================================== -->
-    <!--
-    <div class="section-content statistic-section parallax" data-stellar-background-ratio="0">
-        <div class="container">
-            <div class="statistic-box triggerAnimation animated" data-animate="shake">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-post">
-                            <div class="statistic-counter">
-                                <i class="fa fa-heart-o"></i>
-                                <p><span class="timer" data-from="0" data-to="500"></span></p>
-                                <p>Finished Projects</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-post">
-                            <div class="statistic-counter">
-                                <i class="fa fa-bell-o"></i>
-                                <p><span class="timer" data-from="0" data-to="68"></span></p>
-                                <p>Awards Won</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-post">
-                            <div class="statistic-counter">
-                                <i class="fa fa-star-o"></i>
-                                <p><span class="timer" data-from="0" data-to="450"></span></p>
-                                <p>Happy Customers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-post">
-                            <div class="statistic-counter">
-                                <i class="fa fa-moon-o"></i>
-                                <p><span class="timer" data-from="0" data-to="840"></span></p>
-                                <p>Design Ideas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!-- blog-section
-        ================================================== -->
     <div class="section-content blog-section">
         <div class="title-section">
             <div class="container triggerAnimation animated" data-animate="bounceIn">
@@ -670,14 +462,8 @@ $this->title = 'My Yii Application';
                 <div class="item blog-post">
                     <img alt="" src="upload/faq/faq01.jpg">
                     <div class="post-content">
-                        <!--
-                        <div class="post-date">
-                            <p><span>22</span>apr</p>
-                        </div>
-                        -->
                         <div class="content-data">
                             <h2><a href="faqs-afiliacion.php">¿Sobre la afiliación?</a></h2>
-                            <!--<p>By: <a href="#">Admin</a> | <a href="#">05 Comments</a></p>-->
                         </div>
                     </div>
                 </div>
@@ -685,14 +471,8 @@ $this->title = 'My Yii Application';
                 <div class="item blog-post">
                     <img alt="" src="upload/faq/faq02.jpg">
                     <div class="post-content">
-                        <!--
-                        <div class="post-date">
-                            <p><span>18</span>apr</p>
-                        </div>
-                        -->
                         <div class="content-data">
                             <h2><a href="faqs-clave-secreta.php">¿Seguridad en la clave secreta?</a></h2>
-                            <!--<p>By: <a href="#">Admin</a> | <a href="#">05 Comments</a></p>-->
                         </div>
                     </div>
                 </div>
@@ -700,14 +480,8 @@ $this->title = 'My Yii Application';
                 <div class="item blog-post">
                     <img alt="" src="upload/faq/faq03.jpg">
                     <div class="post-content">
-                        <!--
-                        <div class="post-date">
-                            <p><span>05</span>apr</p>
-                        </div>
-                        -->
                         <div class="content-data">
                             <h2><a href="faqs-uso.php">¿Consulta sobre el uso de la aplicación?</a></h2>
-                            <!--<p>By: <a href="#">Admin</a> | <a href="#">05 Comments</a></p>-->
                         </div>
                     </div>
                 </div>
@@ -715,14 +489,8 @@ $this->title = 'My Yii Application';
                 <div class="item blog-post">
                     <img alt="" src="upload/faq/faq04.jpg">
                     <div class="post-content">
-                        <!--
-                        <div class="post-date">
-                            <p><span>17</span>apr</p>
-                        </div>
-                        -->
                         <div class="content-data" style="margin-left: 0">
                             <h2><a href="faqs-servicios.php">¿Consulta sobre los servicios?</a></h2>
-                            <!--<p>By: <a href="#">Admin</a> | <a href="#">05 Comments</a></p>-->
                         </div>
                     </div>
                 </div>
@@ -730,15 +498,9 @@ $this->title = 'My Yii Application';
                 <div class="item blog-post">
                     <img alt="" src="upload/faq/faq05.jpg">
                     <div class="post-content">
-                        <!--
-                        <div class="post-date">
-                            <p><span>29</span>apr</p>
-                        </div>
-                        -->
                         <div class="content-data">
                             <h2><a href="faqs-costos-y-limites-de-dinero.php">¿Cuales son los costos y límites de
                                     dinero?</a></h2>
-                            <!--<p>By: <a href="#">Admin</a> | <a href="#">05 Comments</a></p>-->
                         </div>
                     </div>
                 </div>
@@ -746,14 +508,8 @@ $this->title = 'My Yii Application';
                 <div class="item blog-post">
                     <img alt="" src="upload/faq/faq06.jpg">
                     <div class="post-content">
-                        <!--
-                        <div class="post-date">
-                            <p><span>06</span>apr</p>
-                        </div>
-                        -->
                         <div class="content-data">
                             <h2><a href="faqs-consultas-en-general.php">¿Consultas en general?</a></h2>
-                            <!--<p>By: <a href="#">Admin</a> | <a href="#">05 Comments</a></p>-->
                         </div>
                     </div>
                 </div>
@@ -767,8 +523,6 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 
-    <!-- client-section
-        ================================================== -->
     <div class="section-content client-section">
         <div class="title-section">
             <div class="container triggerAnimation animated" data-animate="bounceIn">
@@ -801,5 +555,4 @@ $this->title = 'My Yii Application';
             </ul>
         </div>
     </div>
-
 </div>
