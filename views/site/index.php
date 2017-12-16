@@ -56,7 +56,7 @@ $this->title = 'JetCash';
                 <!-- SLIDE  -->
                 <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
                     <!-- MAIN IMAGE -->
-                    <img src="upload/banner/banner02.jpg" alt="darkblurbg" data-bgfit="cover"
+                    <img src="images/banner/banner02.jpg" alt="darkblurbg" data-bgfit="cover"
                          data-bgposition="left top" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
@@ -104,7 +104,7 @@ $this->title = 'JetCash';
                 <!-- SLIDE  -->
                 <li data-transition="curtain-1" data-slotamount="7" data-masterspeed="600">
                     <!-- MAIN IMAGE -->
-                    <img src="upload/banner/banner03.jpg" style='background-color:#b2c4cc' alt="" data-bgfit="cover"
+                    <img src="images/banner/banner03.jpg" style='background-color:#b2c4cc' alt="" data-bgfit="cover"
                          data-bgposition="left top" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
@@ -160,13 +160,13 @@ $this->title = 'JetCash';
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
                          data-captionhidden="on"
-                         style="z-index: 9"><img src="upload/banner/banner3.png" alt="">
+                         style="z-index: 9"><img src="images/banner/banner3.png" alt="">
                     </div>
                 </li>
                 <!-- SLIDE  -->
                 <li data-transition="flyin" data-slotamount="7" data-masterspeed="800">
                     <!-- MAIN IMAGE -->
-                    <img src="upload/banner/banner04.jpg" style='background-color:#b2c4cc' alt="" data-bgfit="cover"
+                    <img src="images/banner/banner04.jpg" style='background-color:#b2c4cc' alt="" data-bgfit="cover"
                          data-bgposition="left top" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
 
@@ -181,7 +181,7 @@ $this->title = 'JetCash';
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
                          data-captionhidden="on"
-                         style="z-index: 9"><img src="upload/banner/banner3.png" alt="">
+                         style="z-index: 9"><img src="images/banner/banner3.png" alt="">
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -281,7 +281,7 @@ $this->title = 'JetCash';
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <img src="upload/icons/ico-recargar-80x80.png">
+                                <img src="images/icon/ico-recargar-80x80.png">
                                 <h2>Cargar y Recargar</h2>
                                 <span>Vestibulum auctor dapibus neque.</span>
                             </div>
@@ -291,7 +291,7 @@ $this->title = 'JetCash';
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <img src="upload/icons/ico-cargar-80x80.png">
+                                <img src="images/icon/ico-cargar-80x80.png">
                                 <h2>Retirar</h2>
                                 <span>Etetur adipiscing elit. </span>
                             </div>
@@ -301,7 +301,7 @@ $this->title = 'JetCash';
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <img src="upload/icons/ico-comprar-80x80.png">
+                                <img src="images/icon/ico-comprar-80x80.png">
                                 <h2>Comprar</h2>
                                 <span>Cum sociis natoque penatibus et </span>
                             </div>
@@ -311,7 +311,7 @@ $this->title = 'JetCash';
                     <div class="col-sm-3">
                         <div class="services-post triggerAnimation animated" data-animate="flipInY">
                             <div class="services-head">
-                                <img src="upload/icons/ico-transferir-80x80.png">
+                                <img src="images/icon/ico-transferir-80x80.png">
                                 <h2>Transferir</h2>
                                 <span>Integer posuere erat a ante</span>
                             </div>
@@ -335,7 +335,7 @@ $this->title = 'JetCash';
 
                 <div class="item project-post">
                     <div class="project-gal">
-                        <img alt="" src="upload/services/service01.jpg">
+                        <img alt="" src="images/service/service01.jpg">
                     </div>
                     <div class="project-content">
                         <h2>Recarga de móvil</h2>
@@ -345,7 +345,7 @@ $this->title = 'JetCash';
 
                 <div class="item project-post">
                     <div class="project-gal">
-                        <img alt="" src="upload/services/service02.jpg">
+                        <img alt="" src="images/service/service02.jpg">
                     </div>
                     <div class="project-content">
                         <h2>Pago de servicios</h2>
@@ -355,7 +355,7 @@ $this->title = 'JetCash';
 
                 <div class="item project-post ">
                     <div class="project-gal">
-                        <img alt="" src="upload/services/service04.jpg">
+                        <img alt="" src="images/service/service04.jpg">
                     </div>
                     <div class="project-content">
                         <h2>Cambio de dinero</h2>
@@ -365,7 +365,7 @@ $this->title = 'JetCash';
 
                 <div class="item project-post">
                     <div class="project-gal">
-                        <img alt="" src="upload/services/service05.jpg">
+                        <img alt="" src="images/service/service05.jpg">
                     </div>
                     <div class="project-content">
                         <h2>Envío y recepción de remesas</h2>
@@ -460,7 +460,7 @@ $this->title = 'JetCash';
             <div id="owl-demo2" class="owl-carousel owl-theme">
 
                 <div class="item blog-post">
-                    <img alt="" src="upload/faq/faq01.jpg">
+                    <img alt="" src="images/faq/faq01.jpg">
                     <div class="post-content">
                         <div class="content-data">
                             <h2><a href="faqs-afiliacion.php">¿Sobre la afiliación?</a></h2>
@@ -469,7 +469,7 @@ $this->title = 'JetCash';
                 </div>
 
                 <div class="item blog-post">
-                    <img alt="" src="upload/faq/faq02.jpg">
+                    <img alt="" src="images/faq/faq02.jpg">
                     <div class="post-content">
                         <div class="content-data">
                             <h2><a href="faqs-clave-secreta.php">¿Seguridad en la clave secreta?</a></h2>
@@ -478,7 +478,7 @@ $this->title = 'JetCash';
                 </div>
 
                 <div class="item blog-post">
-                    <img alt="" src="upload/faq/faq03.jpg">
+                    <img alt="" src="images/faq/faq03.jpg">
                     <div class="post-content">
                         <div class="content-data">
                             <h2><a href="faqs-uso.php">¿Consulta sobre el uso de la aplicación?</a></h2>
@@ -487,7 +487,7 @@ $this->title = 'JetCash';
                 </div>
 
                 <div class="item blog-post">
-                    <img alt="" src="upload/faq/faq04.jpg">
+                    <img alt="" src="images/faq/faq04.jpg">
                     <div class="post-content">
                         <div class="content-data" style="margin-left: 0">
                             <h2><a href="faqs-servicios.php">¿Consulta sobre los servicios?</a></h2>
@@ -496,7 +496,7 @@ $this->title = 'JetCash';
                 </div>
 
                 <div class="item blog-post">
-                    <img alt="" src="upload/faq/faq05.jpg">
+                    <img alt="" src="images/faq/faq05.jpg">
                     <div class="post-content">
                         <div class="content-data">
                             <h2><a href="faqs-costos-y-limites-de-dinero.php">¿Cuales son los costos y límites de
@@ -506,7 +506,7 @@ $this->title = 'JetCash';
                 </div>
 
                 <div class="item blog-post">
-                    <img alt="" src="upload/faq/faq06.jpg">
+                    <img alt="" src="images/faq/faq06.jpg">
                     <div class="post-content">
                         <div class="content-data">
                             <h2><a href="faqs-consultas-en-general.php">¿Consultas en general?</a></h2>
@@ -534,22 +534,22 @@ $this->title = 'JetCash';
             <ul class="bxslider">
                 <li>
                     <ul class="client-list">
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce01.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce02.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce03.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce04.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce05.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce06.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce01.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce02.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce03.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce04.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce05.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce06.jpg"></a></li>
                     </ul>
                 </li>
                 <li>
                     <ul class="client-list">
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce06.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce05.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce04.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce03.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce02.jpg"></a></li>
-                        <li><a href="#"><img alt="" src="upload/commerce/commerce01.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce06.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce05.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce04.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce03.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce02.jpg"></a></li>
+                        <li><a href="#"><img alt="" src="images/commerce/commerce01.jpg"></a></li>
                     </ul>
                 </li>
             </ul>
