@@ -87,11 +87,12 @@ use yii\helpers\Url;
                 <div class="col-md-6">
                     <p style="text-align: right">
                         <a href="https://www.indecopi.gob.pe/inicio" target="_blank">
-                            <img src="images/logo/indecopi.png" style="height:30px"/>
+                            <img src="images/logo/indecopi.png" style="height:30px">
                         </a>
                         <a href="http://www.sbs.gob.pe/" target="_blank">
-                            <img src="images/logo/sbs.png" style="height:30px"/>
+                            <img src="images/logo/sbs.png" style="height:30px">
                         </a>
+
                     </p>
                 </div>
             </div>
