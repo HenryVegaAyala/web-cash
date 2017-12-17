@@ -53,12 +53,15 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
      * @return string
      */
-    public function actionIndex()
+    public function actionIndex(): string
     {
-        return $this->render('index');
+        if (Yii::$app->user->isGuest) {
+            return $this->render('index');
+        }
+
+        return $this->render('/panel/index');
     }
 
     /**
