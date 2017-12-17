@@ -4,8 +4,8 @@ namespace app\models;
 
 use Yii;
 use yii\base\Model;
+use yii\caching\DbDependency;
 use yii\data\ActiveDataProvider;
-use app\models\User;
 
 /**
  * UserSearch represents the model behind the search form about `app\models\User`.
@@ -19,7 +19,13 @@ class UserSearch extends User
     {
         return [
             [['id', 'estado'], 'integer'],
-            [['nombres', 'correo', 'password', 'authKey', 'accessToken', 'fecha_digitada', 'fecha_modificada', 'fecha_eliminada', 'usuario_digitado', 'usuario_modificado', 'usuario_eliminado', 'ip', 'host'], 'safe'],
+            [
+                [
+                    'nombres',
+                    'correo',
+                ],
+                'safe',
+            ],
         ];
     }
 
@@ -41,9 +47,18 @@ class UserSearch extends User
      */
     public function search($params)
     {
-        $query = User::find();
-
-        // add conditions that should always apply here
+        $db = Yii::$app->db;
+        $dependency = new DbDependency();
+        $query = User::getDb()->cache(function ($db) {
+            return User::find()->select([
+                'id',
+                'nombres',
+                'correo',
+                'estado',
+            ])
+                ->andWhere('cliente.estado = :estado', [':estado' => 1])
+                ->orderBy(['usuario.nombres' => SORT_DESC]);
+        }, 3600, $dependency);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -52,8 +67,6 @@ class UserSearch extends User
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
 
@@ -61,21 +74,10 @@ class UserSearch extends User
         $query->andFilterWhere([
             'id' => $this->id,
             'estado' => $this->estado,
-            'fecha_digitada' => $this->fecha_digitada,
-            'fecha_modificada' => $this->fecha_modificada,
-            'fecha_eliminada' => $this->fecha_eliminada,
         ]);
 
         $query->andFilterWhere(['like', 'nombres', $this->nombres])
-            ->andFilterWhere(['like', 'correo', $this->correo])
-            ->andFilterWhere(['like', 'password', $this->password])
-            ->andFilterWhere(['like', 'authKey', $this->authKey])
-            ->andFilterWhere(['like', 'accessToken', $this->accessToken])
-            ->andFilterWhere(['like', 'usuario_digitado', $this->usuario_digitado])
-            ->andFilterWhere(['like', 'usuario_modificado', $this->usuario_modificado])
-            ->andFilterWhere(['like', 'usuario_eliminado', $this->usuario_eliminado])
-            ->andFilterWhere(['like', 'ip', $this->ip])
-            ->andFilterWhere(['like', 'host', $this->host]);
+            ->andFilterWhere(['like', 'correo', $this->correo]);
 
         return $dataProvider;
     }
