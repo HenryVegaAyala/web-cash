@@ -1,11 +1,10 @@
-<?php
+﻿<?php
 
 namespace app\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
-use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 
@@ -16,9 +15,9 @@ use app\models\LoginForm;
 class SiteController extends Controller
 {
     /**
-     * @return array
+     * @inheritdoc
      */
-    public function behaviors(): array
+    public function behaviors()
     {
         return [
             'access' => [
@@ -42,9 +41,9 @@ class SiteController extends Controller
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
-    public function actions(): array
+    public function actions()
     {
         return [
             'error' => [
@@ -58,15 +57,17 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays homepage.
      * @return string
      */
-    public function actionIndex(): string
+    public function actionIndex()
     {
         return $this->render('index');
     }
 
     /**
-     * @return string|Response
+     * Login action.
+     * @return string
      */
     public function actionLogin()
     {
@@ -85,9 +86,10 @@ class SiteController extends Controller
     }
 
     /**
-     * @return Response
+     * Logout action.
+     * @return string
      */
-    public function actionLogout(): Response
+    public function actionLogout()
     {
         Yii::$app->user->logout();
 

@@ -2,103 +2,73 @@
 
 namespace app\models;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
+use yii\db\ActiveRecord;
+
+/**
+ * This is the model class for table "usuario".
+ *
+ * @property integer $id
+ * @property string  $nombres
+ * @property string  $correo
+ * @property string  $password
+ * @property string  $authKey
+ * @property string  $accessToken
+ * @property integer $estado
+ * @property string  $fecha_digitada
+ * @property string  $fecha_modificada
+ * @property string  $fecha_eliminada
+ * @property string  $usuario_digitado
+ * @property string  $usuario_modificado
+ * @property string  $usuario_eliminado
+ * @property string  $ip
+ * @property string  $host
+ */
+class User extends ActiveRecord
 {
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
-
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
-
-
     /**
      * @inheritdoc
      */
-    public static function findIdentity($id)
+    public static function tableName()
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        return 'usuario';
     }
 
     /**
      * @inheritdoc
      */
-    public static function findIdentityByAccessToken($token, $type = null)
+    public function rules()
     {
-        foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
-    {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;
+        return [
+            [['estado'], 'integer'],
+            [['fecha_digitada', 'fecha_modificada', 'fecha_eliminada'], 'safe'],
+            [['nombres', 'correo'], 'string', 'max' => 80],
+            [['password', 'authKey', 'accessToken', 'host'], 'string', 'max' => 150],
+            [['usuario_digitado', 'usuario_modificado', 'usuario_eliminado'], 'string', 'max' => 50],
+            [['ip'], 'string', 'max' => 30],
+        ];
     }
 
     /**
      * @inheritdoc
      */
-    public function getId()
+    public function attributeLabels()
     {
-        return $this->id;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getAuthKey()
-    {
-        return $this->authKey;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function validateAuthKey($authKey)
-    {
-        return $this->authKey === $authKey;
-    }
-
-    /**
-     * Validates password
-     *
-     * @param string $password password to validate
-     * @return bool if password provided is valid for current user
-     */
-    public function validatePassword($password)
-    {
-        return $this->password === $password;
+        return [
+            'id' => 'ID',
+            'nombres' => 'Nombres',
+            'correo' => 'Correo',
+            'password' => 'Contraseña',
+            'authKey' => 'Auth Key',
+            'accessToken' => 'Access Token',
+            'estado' => 'Estado',
+            'fecha_digitada' => 'Fecha Digitada',
+            'fecha_modificada' => 'Fecha Modificada',
+            'fecha_eliminada' => 'Fecha Eliminada',
+            'usuario_digitado' => 'Usuario Digitado',
+            'usuario_modificado' => 'Usuario Modificado',
+            'usuario_eliminado' => 'Usuario Eliminado',
+            'ip' => 'Ip',
+            'host' => 'Host',
+        ];
     }
 }

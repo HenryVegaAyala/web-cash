@@ -6,7 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log','assetsAutoCompress'],
+    'bootstrap' => ['log', 'assetsAutoCompress'],
     'sourceLanguage' => 'es',
     'language' => 'es',
     'timeZone' => 'America/Lima',
@@ -25,29 +25,33 @@ $config = [
                 ],
             ],
         ],
+        'session' => [
+            'class' => 'yii\web\DbSession',
+            'sessionTable' => 'session',
+        ],
         'assetsAutoCompress' =>
             [
-                'class' => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
-                'enabled' => true,
-                'readFileTimeout' => 3,
-                'jsCompress' => true,
-                'jsCompressFlaggedComments' => true,
-                'cssCompress' => true,
-                'cssFileCompile' => true,
-                'cssFileRemouteCompile' => false,
-                'cssFileCompress' => true,
-                'cssFileBottom' => false,
-                'cssFileBottomLoadOnJs' => false,
-                'jsFileCompile' => true,
-                'jsFileRemouteCompile' => false,
-                'jsFileCompress' => true,
+                'class'                         => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
+                'enabled'                       => true,
+                'readFileTimeout'               => 3,
+                'jsCompress'                    => true,
+                'jsCompressFlaggedComments'     => true,
+                'cssCompress'                   => true,
+                'cssFileCompile'                => true,
+                'cssFileRemouteCompile'         => false,
+                'cssFileCompress'               => true,
+                'cssFileBottom'                 => false,
+                'cssFileBottomLoadOnJs'         => false,
+                'jsFileCompile'                 => true,
+                'jsFileRemouteCompile'          => false,
+                'jsFileCompress'                => true,
                 'jsFileCompressFlaggedComments' => true,
-                'htmlCompress' => true,
-                'noIncludeJsFilesOnPjax' => true,
-                'htmlCompressOptions' =>
+                'htmlCompress'                  => true,
+                'noIncludeJsFilesOnPjax'        => true,
+                'htmlCompressOptions'           =>
                     [
                         'extra' => false,
-                        'no-comments' => true,
+                        'no-comments' => true
                     ],
             ],
         'request' => [
@@ -58,7 +62,8 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
+            'enableSession' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -83,8 +88,9 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
-                /**home**/
                 '/' => 'site/index',
+                '/login' => 'site/login',
+                '/logout/<id:\d+>' => '/site/logout',
             ],
         ],
 
