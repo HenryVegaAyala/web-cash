@@ -91,6 +91,20 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'views/site/index.php': 'views/site/index.php',
+                    'views/layouts/footer.php': 'views/layouts/footer.php',
+                    'views/layouts/header.php': 'views/layouts/header.php',
+                    'views/layouts/main.php': 'views/layouts/main.php'
+                }
+            }
         }
     }),
 
@@ -101,7 +115,8 @@ module.exports = function (grunt) {
         grunt.loadNpmTasks('grunt-minified'),
         grunt.loadNpmTasks('grunt-contrib-imagemin'),
         grunt.loadNpmTasks('grunt-contrib-watch'),
+        grunt.loadNpmTasks('grunt-contrib-htmlmin'),
 
-        grunt.registerTask('build', ['concat_css', 'purifycss', 'cssmin', 'concat_sourcemap', 'minified', 'imagemin']),
+        grunt.registerTask('build', ['concat_css', 'purifycss', 'cssmin', 'concat_sourcemap', 'minified', 'imagemin', 'htmlmin']),
         grunt.registerTask('default', ['watch'])
 }
