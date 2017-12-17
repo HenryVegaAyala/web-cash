@@ -2,14 +2,16 @@
 
 namespace app\controllers;
 
+use app\helpers\Notificaciones;
+use app\helpers\Utils;
 use Carbon\Carbon;
+use tebazil\runner\ConsoleCommandRunner;
 use Yii;
 use app\models\User;
 use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\Response;
 
 /**
  * Class UserController
@@ -24,7 +26,7 @@ class UserController extends Controller
     /**
      * @return array
      */
-    public function behaviors(): array
+    public function behaviors()
     {
         return [
             'verbs' => [
@@ -39,7 +41,7 @@ class UserController extends Controller
     /**
      * @return string
      */
-    public function actionIndex(): string
+    public function actionIndex()
     {
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->post());
@@ -59,14 +61,14 @@ class UserController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $model->authKey = md5(random_int(1, 9999));
             $model->accessToken = md5(random_int(1, 9999));
-            $model->fecha_digitada = Carbon::now();
+            $model->fecha_digitada = Carbon::now('America/Lima');
             $model->usuario_digitado = Yii::$app->user->identity->id;
             $model->ip = Yii::$app->request->userIP;
             $model->host = (string)php_uname();
             $model->estado = (int)$model->estado;
             $model->save();
 
-            $this->encryptPassword($model->id, $model->password);
+            $this->encryptPassword($model->id, $model->contrasena);
 
             return $this->redirect([self::INDEX]);
         }
@@ -88,7 +90,7 @@ class UserController extends Controller
             $connection->createCommand()
                 ->update(self::TABLE,
                     [
-                        'fecha_modificada' => Carbon::now(),
+                        'fecha_modificada' => Carbon::now('America/Lima'),
                         'usuario_modificado' => Yii::$app->user->identity->id,
                         'ip' => Yii::$app->request->userIP,
                         'host' => (string)php_uname(),
@@ -97,7 +99,7 @@ class UserController extends Controller
                     ],
                     'id = :id', [':id' => $id])
                 ->execute();
-            $this->encryptPassword($model->id, $model->password);
+            $this->encryptPassword($model->id, $model->contrasena);
 
             return $this->redirect([self::INDEX]);
         }
@@ -116,10 +118,10 @@ class UserController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
+            $model->fecha_modificada = Carbon::now('America/Lima');
+            $model->usuario_modificado = Yii::$app->user->identity->id;
             $model->ip = Yii::$app->request->userIP;
             $model->host = (string)php_uname();
-            $model->fecha_modificada = Carbon::now();
-            $model->usuario_modificado = Yii::$app->user->identity->id;
             $model->update();
 
             if (!empty($model->contrasena_desc)) {
@@ -134,6 +136,7 @@ class UserController extends Controller
         ]);
     }
 
+
     /**
      * @param $id
      * @return \yii\web\Response
@@ -147,9 +150,9 @@ class UserController extends Controller
 
     /**
      * @param $id
-     * @return Response
+     * @return \yii\web\Response
      */
-    public function actionStatus($id): Response
+    public function actionStatus($id)
     {
         $transaction = Yii::$app->db;
         $transaction->createCommand()
@@ -165,7 +168,7 @@ class UserController extends Controller
 
     /**
      * @param $id
-     * @return array|null|\yii\db\ActiveRecord
+     * @return User|array|null|\yii\db\ActiveRecord
      * @throws \yii\web\NotFoundHttpException
      * @throws NotFoundHttpException
      */
@@ -192,7 +195,7 @@ class UserController extends Controller
      * @param $password
      * @return string
      */
-    public function encryptPassword($id, $password): string
+    public function encryptPassword($id, $password)
     {
         $transaction = Yii::$app->db;
         $transaction->createCommand()

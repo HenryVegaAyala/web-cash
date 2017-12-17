@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 namespace app\controllers;
 
@@ -8,10 +8,6 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 
-/**
- * Class SiteController
- * @package app\controllers
- */
 class SiteController extends Controller
 {
     /**

@@ -1,8 +1,4 @@
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
-Header set Cache-Control "max-age=604800, public"
-</FilesMatch>
-
-Options All -Indexes
+﻿Options All -Indexes
 <IfModule mod_rewrite.c>
     Options +FollowSymlinks
     RewriteEngine On
