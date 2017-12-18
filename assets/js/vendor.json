@@ -1,0 +1,22 @@
+[
+  "web/js/vendor/jquery.min.js",
+  "web/js/vendor/jquery.migrate.js",
+  "web/js/vendor/owl.carousel.min.js",
+  "web/js/vendor/jquery.magnific-popup.min.js",
+  "web/js/vendor/jquery.bxslider.min.js",
+  "web/js/vendor/jquery.appear.js",
+  "web/js/vendor/jquery.countTo.js",
+  "web/js/vendor/bootstrap.js",
+  "web/js/vendor/jquery.imagesloaded.min.js",
+  "web/js/vendor/jquery.isotope.min.js",
+  "web/js/vendor/retina-1.1.0.min.js",
+  "web/js/vendor/plugins-scroll.js",
+  "web/js/vendor/waypoint.min.js",
+  "web/js/vendor/jquery.stellar.min.js",
+  "https://maps.googleapis.com/maps/api/js?key=AIzaSyCfMnpOPXS3ByOSEkSJXfGFDnJiKsklYIQ",
+  "web/js/vendor/gmap3.min.js",
+  "web/js/vendor/jquery.themepunch.plugins.min.js",
+  "web/js/vendor/jquery.themepunch.revolution.min.js",
+  "web/js/vendor/script.js",
+  "web/js/jetcash.js"
+]

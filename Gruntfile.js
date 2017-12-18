@@ -4,6 +4,8 @@ module.exports = function (grunt) {
         concat_css: {
             all: {
                 src: [
+                    'http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300,100,200',
+                    'https://fonts.googleapis.com/css?family=Open+Sans',
                     'web/css/vendor/animate.css',
                     'web/css/vendor/bootstrap.css',
                     'web/css/vendor/flexslider.css',
@@ -50,9 +52,14 @@ module.exports = function (grunt) {
             options: {
                 sourcesContent: true
             },
-            all: {
+            app: {
                 files: {
                     'web/js/all.js': grunt.file.readJSON('assets/js/all.json')
+                }
+            },
+            vendor: {
+                files: {
+                    'web/js/vendor.js': grunt.file.readJSON('assets/js/vendor.json')
                 }
             }
         },
@@ -61,8 +68,12 @@ module.exports = function (grunt) {
                 sourcemap: true,
                 allinone: false
             },
-            files: {
+            app: {
                 src: ['web/js/all.js'],
+                dest: 'web/js/'
+            },
+            vendor: {
+                src: ['web/js/vendor.js'],
                 dest: 'web/js/'
             }
         },
@@ -117,6 +128,6 @@ module.exports = function (grunt) {
         grunt.loadNpmTasks('grunt-contrib-watch'),
         grunt.loadNpmTasks('grunt-contrib-htmlmin'),
 
-        grunt.registerTask('build', ['concat_css', 'purifycss', 'cssmin', 'concat_sourcemap', 'minified', 'imagemin', 'htmlmin']),
+        grunt.registerTask('build', ['concat_css', 'purifycss', 'cssmin', 'concat_sourcemap', 'minified', 'imagemin']),
         grunt.registerTask('default', ['watch'])
 }
