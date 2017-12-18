@@ -6,42 +6,58 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\widgets\Pjax;
 
-$this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Panel - Iniciar Sesión';
+$descriptions = 'Panel - JetCash';
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+<div id="content">
+    <div class="section-content services-section">
+        <div class="title-section">
+            <div class="container">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h1>
+                        <?php echo Html::encode($descriptions) ?>
+                    </h1>
 
-    <?php $form = ActiveForm::begin([
-        'id' => 'login-form',
-        'layout' => 'horizontal',
-        'fieldConfig' => [
-            'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            'labelOptions' => ['class' => 'col-lg-1 control-label'],
-        ],
-    ]); ?>
+                    <?php
+                    Pjax::begin();
+                    $form = ActiveForm::begin(
+                        [
+                            'enableAjaxValidation' => false,
+                            'enableClientValidation' => false,
+                            'validateOnChange' => false,
+                            'method' => 'post',
+                            'options' => [
+                                'class' => 'form-horizontal form-label-left',
+                                'data-pjax' => true,
+                            ],
+                            'id' => 'login-form',
+                        ]
+                    ); ?>
 
-    <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
-    <?= $form->field($model, 'password')->passwordInput() ?>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <?php echo $form->field($model, 'username')
+                            ->textInput(['class' => 'form-control', 'placeholder' => 'Usuario'])
+                            ->label(false) ?>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <?php echo $form->field($model, 'password')
+                            ->passwordInput(['class' => 'form-control', 'placeholder' => 'Contraseña'])
+                            ->label(false) ?>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <?php echo Html::submitButton('Iniciar Sesión',
+                            ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    </div>
 
-    <?= $form->field($model, 'rememberMe')->checkbox([
-        'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-    ]) ?>
-
-    <div class="form-group">
-        <div class="col-lg-offset-1 col-lg-11">
-            <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    <?php
+                    ActiveForm::end();
+                    Pjax::end(); ?>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <?php ActiveForm::end(); ?>
-
-    <div class="col-lg-offset-1" style="color:#999;">
-        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
     </div>
 </div>
