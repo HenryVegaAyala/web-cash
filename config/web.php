@@ -16,6 +16,7 @@ $config = [
     ],
     'components' => [
         'assetManager' => [
+            'bundles' => false,
             'appendTimestamp' => true,
             'converter' => [
                 'class' => 'yii\web\AssetConverter',
