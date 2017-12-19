@@ -14,7 +14,8 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <?php if (Yii::$app->user->isGuest) { ?>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300,100,200' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300,100,200' rel='stylesheet'
+              type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <?php echo Html::cssFile('@web/css/vendor/animate.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/animate.css'))) ?>
         <?php echo Html::cssFile('@web/css/vendor/bootstrap.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/bootstrap.css'))) ?>
@@ -26,6 +27,11 @@ AppAsset::register($this);
         <?php echo Html::cssFile('@web/css/vendor/owl.theme.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/owl.theme.css'))) ?>
         <?php echo Html::cssFile('@web/css/vendor/settings.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/settings.css'))) ?>
         <?php echo Html::cssFile('@web/css/style.css?v=' . filemtime(Yii::getAlias('@webroot/css/style.css'))) ?>
+    <?php } else { ?>
+        <?php echo Html::cssFile('@web/css/vendor/bootstrap.min.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/bootstrap.min.css'))) ?>
+        <?php echo Html::cssFile('@web/css/vendor/font-awesome.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/font-awesome.css'))) ?>
+        <?php echo Html::cssFile('@web/css/vendor/dataTables.bootstrap4.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/dataTables.bootstrap4.css'))) ?>
+        <?php echo Html::cssFile('@web/css/vendor/sb-admin.css?v=' . filemtime(Yii::getAlias('@webroot/css/vendor/sb-admin.css'))) ?>
     <?php } ?>
     <?php echo Html::csrfMetaTags() ?>
     <title><?php echo Html::encode($this->title) ?></title>
@@ -42,7 +48,11 @@ AppAsset::register($this);
         <?php echo $content ?>
         <?php echo $this->render('footer') ?>
     <?php } else { ?>
-        <?php echo $content ?>
+        <?php echo $this->render('/panel/header') ?>
+        <div class="container-fluid">
+            <?php echo $content ?>
+        </div>
+        <?php echo $this->render('/panel/footer') ?>
     <?php } ?>
 </div>
 <?php if (Yii::$app->user->isGuest) { ?>
@@ -66,6 +76,11 @@ AppAsset::register($this);
     <?php echo Html::jsFile('@web/js/vendor/jquery.themepunch.revolution.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.themepunch.revolution.min.js'))) ?>
     <?php echo Html::jsFile('@web/js/vendor/script.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/script.js'))) ?>
     <?php echo Html::jsFile('@web/js/jetcash.js?v=' . filemtime(Yii::getAlias('@webroot/js/jetcash.js'))) ?>
+<?php } else { ?>
+    <?php echo Html::jsFile('@web/js/all.js?v=' . filemtime(Yii::getAlias('@webroot/js/all.js'))) ?>
+    <?php echo Html::jsFile('@web/js/vendor/jquery.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/jquery.min.js'))) ?>
+    <?php echo Html::jsFile('@web/js/vendor/bootstrap.bundle.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/bootstrap.bundle.min.js'))) ?>
+    <?php echo Html::jsFile('@web/js/vendor/sb-admin.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/vendor/sb-admin.min.js'))) ?>
 <?php } ?>
 <?php $this->endBody() ?>
 </body>
